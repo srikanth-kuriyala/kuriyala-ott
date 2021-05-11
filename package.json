@@ -1,8 +1,9 @@
 {
   "name": "@srikanth.kuriyala/kuriyala-ott",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "OTT client platform",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production babel modules/components --out-dir dist --copy-files"
   },
