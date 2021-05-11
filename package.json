@@ -1,0 +1,32 @@
+{
+  "name": "@srikanth.kuriyala/kuriyala-ott",
+  "version": "1.0.1",
+  "description": "OTT client platform",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist && NODE_ENV=production babel modules/components --out-dir dist --copy-files"
+  },
+  "author": "Srikanth Kuriyala",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/srikanth-kuriyala/kuriyala-ott.git"
+  },
+  "bugs": {
+    "url": "https://github.com/srikanth-kuriyala/kuriyala-ott/issues"
+  },
+  "homepage": "https://github.com/srikanth-kuriyala/kuriyala-ott#readme",
+  "keywords": [
+    "react",
+    "ott"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-react": "^7.13.13"
+  }
+}
