@@ -1,4 +1,3 @@
-import Badge from './Badge';
-import Button from './Button';
+import MoviesList from "./movieslist";
 
-export { Badge, Button };
+export { MoviesList }

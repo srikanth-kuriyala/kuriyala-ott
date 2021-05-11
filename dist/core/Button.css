@@ -1,0 +1,21 @@
+.btn {
+    border: none;
+    border-radius: 5px;
+    height: auto;
+    width: auto;
+}
+.btn--primary {
+    background-color: rgba(75, 132, 243, 1);
+    color: white;
+}
+.btn--secondary {
+    background-color: cadetblue;
+}
+.btn--success {
+    background-color: green;
+    color: white;
+}
+.btn--error {
+    background-color: red;
+    color: white;
+}

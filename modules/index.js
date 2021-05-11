@@ -1,3 +1,8 @@
-import { Button, Badge } from "./components";
+import { Button, Badge } from "./core";
+import { MoviesList } from "./components";
 
-export {Button, Badge};
+export {
+    Button,
+    Badge,
+    MoviesList
+};
