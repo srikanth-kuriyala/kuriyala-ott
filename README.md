@@ -1,6 +1,7 @@
 Under construction <<<<<<<<<<<< OTT platform
 
 # Example
+```
 import { MoviesList } from '@srikanth.kuriyala/kuriyala-ott';
 
 const movies = [
@@ -16,3 +17,4 @@ const movies = [
 ]
 
 <MoviesList movies={movies}/>
+```
