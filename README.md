@@ -5,13 +5,104 @@ Under construction <<<<<<<<<<<< OTT platform
 import { MoviesList } from '@srikanth.kuriyala/kuriyala-ott';
 
 const movies = [
-  { title: "Movie 1", url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4", poster: "https://www.filmibeat.com/ph-big/2011/11/1322479165637218.jpg", description:"Singam First part"},
-  { title: "Movie 2", url: "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4", poster: "https://flxt.tmsimg.com/assets/p10994450_p_v10_ac.jpg", description:"Singam Second part"},
-  { title: "Movie 3", url: "https://cdn.videvo.net/videvo_files/video/free/2014-02/small_watermarked/Microscope_5__Scientist__Videvo_preview.webm", poster: "https://lh3.googleusercontent.com/proxy/lud_3vmHY8Avs3ehtz9o1zsuQ3s0_PccTiP0VMXkkuLKS7awGrJ_vgGSmQtxkwO0Pvtd-4xX3bPICSi3J1EgetUHchF_kleQYZvwb15rmBmDqFUwbotIX7Hdk7wruzVx5d5cpQukNBzewnapI9SAR4SRt4AFi1Gs87f7cywISzjj2pNX", description:"Singam Third part"},
-  { title: "Movie 4", url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4", poster: "https://www.filmibeat.com/ph-big/2011/11/1322479165637218.jpg", description:"Singam First part"},
-  { title: "Movie 5", url: "https://file-examples-com.github.io/uploads/2017/04/file_example_MP4_480_1_5MG.mp4", poster: "https://flxt.tmsimg.com/assets/p10994450_p_v10_ac.jpg", description:"Singam Second part"},
-  { title: "Movie 6", url: "https://cdn.videvo.net/videvo_files/video/free/2014-02/small_watermarked/Microscope_5__Scientist__Videvo_preview.webm", poster: "https://lh3.googleusercontent.com/proxy/lud_3vmHY8Avs3ehtz9o1zsuQ3s0_PccTiP0VMXkkuLKS7awGrJ_vgGSmQtxkwO0Pvtd-4xX3bPICSi3J1EgetUHchF_kleQYZvwb15rmBmDqFUwbotIX7Hdk7wruzVx5d5cpQukNBzewnapI9SAR4SRt4AFi1Gs87f7cywISzjj2pNX", description:"Singam Third part"},
-
+  {
+    title: "Movie 1",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 2",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 3",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 4",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 5",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 6",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 7",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 8",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 9",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 10",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 11",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 12",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 13",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  },
+  {
+    title: "Movie 14",
+    url: "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    poster: "https://lh3.googleusercontent.com/j1SnAqNnzqGOC35MPWM5B2PYRY6Qom0-aKm5zsgsn4fQl4AqdbxQGq9XrPAe3i-dYUNwCrkwgltH3MSIA2-BuRsdxAPh4m77_P26ux8XVfn9kqVDt5Hlwpak9ZL12ZJuUQVjrsETbjzHwD89WZbaNk29mY1wIvK9sjAOgpJ8dXRwHQ_2fmlnE60AHJ1eTyDW5Q2flJOkHwV8_ZEgDJrAgANPT49lw0EHLvaYEndIykGsjtw2JpDd14a-rKek7YqWiPzfbPH1TmNnhQhFRIUSehVZdsf42Y97OQK2bHS9dwhDA-_ITf9jFpEDteFJspDeQqtdGSAAMB_xB-V0xcuTSvWC3ta7s1Wzkfz3c7P4cJti--ZenzfIriB3KI5S2PFCJ051KraNfgazX7k1MIOfU6pmqKpD7jKtc_4FycZwB5yis8yRBVXuU8AnCk9C3ojOYQWt02vxJGjsh5PCUI59M2rBwqTemQT30H4QNtQCMfNYgcY0PmHl1wJkJnHB5tPiISBbg3-i3Znj1hHB-8RhrMNX87R5xPW6odPc2uk5SsDtNJV4fezRNFVUhJfceLdCG5WE1O5iCvJYV2eMnCOeFG9erJE2rbu1SpO61uFa6XQskRJN0W3RC0TLDJdtNTj3lADWDf3Cg5HaDn1weLhGV_PKRLPoODtdy2BQL7Wft0RmA_C13pwlJwjT-83_dfArhVJXwcJV1Dncijt_AxOWKLc=w647-h949-no?authuser=0",
+    shortDescription: "This is short description",
+    description:"In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available"
+  }
 ]
 
 <MoviesList movies={movies}/>
