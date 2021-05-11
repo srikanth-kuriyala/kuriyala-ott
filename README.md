@@ -11,7 +11,9 @@ npm install @srikanth.kuriyala/kuriyala-ott
 ```
 
 If you are using `yarn` use:
+```
 yarn add @srikanth.kuriyala/kuriyala-ott
+```
 
 # Example
 ```
