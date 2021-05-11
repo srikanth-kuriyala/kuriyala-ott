@@ -35,7 +35,7 @@ class MoviesList extends React.Component {
                         <img className="thumbnail" src={item.poster}/>
                         <div className="desc">
                             <h4>{item.title}</h4>
-                            <div>{item.description}</div>
+                            <div>{item.shortDescription}</div>
                             <button className="play_pause" onClick={(e) => this.openPlayer(e, item)}></button>
                         </div>
                     </li>
