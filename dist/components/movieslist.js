@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-require("core-js/modules/es.symbol.description.js");
-
 var _react = _interopRequireDefault(require("react"));
 
 require("./movieslist.css");
@@ -46,7 +44,6 @@ class MoviesList extends _react.default.Component {
   }
 
   render() {
-    console.log(this.state.url);
     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", {
       className: "movies_list"
     }, this.props.movies.map((item, index) => /*#__PURE__*/_react.default.createElement("li", {
@@ -56,7 +53,7 @@ class MoviesList extends _react.default.Component {
       src: item.poster
     }), /*#__PURE__*/_react.default.createElement("div", {
       className: "desc"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, item.title), /*#__PURE__*/_react.default.createElement("div", null, item.description), /*#__PURE__*/_react.default.createElement("button", {
+    }, /*#__PURE__*/_react.default.createElement("h4", null, item.title), /*#__PURE__*/_react.default.createElement("div", null, item.shortDescription), /*#__PURE__*/_react.default.createElement("button", {
       className: "play_pause",
       onClick: e => this.openPlayer(e, item)
     }))))), /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {

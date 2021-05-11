@@ -26,7 +26,6 @@ class MoviesList extends React.Component {
     }
 
     render() {
-        console.log(this.state.url);
         return (
             <div>
                 <ul className="movies_list">
