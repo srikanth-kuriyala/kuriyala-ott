@@ -11,6 +11,10 @@ require("./movieslist.css");
 
 var _videoPlayer = _interopRequireDefault(require("./video-player"));
 
+var _movieDetails = _interopRequireDefault(require("./movie-details"));
+
+var _progressBar = _interopRequireDefault(require("../core/progress-bar"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -23,24 +27,46 @@ class MoviesList extends _react.default.Component {
       e.preventDefault();
       this.setState({
         url: item.url,
-        poster: item.poster
+        poster: item.poster,
+        showMovieDetails: false
       });
     });
 
-    _defineProperty(this, "closePlayer", e => {
+    _defineProperty(this, "closePlayer", (e, videoState) => {
       e.preventDefault();
+      this.props.updateMovieStatus(videoState);
       this.setState({
         url: '',
         poster: ''
       });
     });
 
+    _defineProperty(this, "movieDetails", (e, item) => {
+      e.preventDefault();
+      this.setState({
+        showMovieDetails: true,
+        movie: item
+      });
+    });
+
+    _defineProperty(this, "closeMovieDetails", e => {
+      e.preventDefault();
+      this.setState({
+        showMovieDetails: false,
+        movie: ''
+      });
+    });
+
     this.state = {
       url: '',
-      poster: ''
+      poster: '',
+      movie: '',
+      showMovieDetails: false
     };
     this.openPlayer = this.openPlayer.bind(this);
     this.closePlayer = this.closePlayer.bind(this);
+    this.movieDetails = this.movieDetails.bind(this);
+    this.closeMovieDetails = this.closeMovieDetails.bind(this);
   }
 
   render() {
@@ -48,19 +74,33 @@ class MoviesList extends _react.default.Component {
       className: "movies_list"
     }, this.props.movies.map((item, index) => /*#__PURE__*/_react.default.createElement("li", {
       key: index
+    }, /*#__PURE__*/_react.default.createElement("a", {
+      onClick: e => this.movieDetails(e, item)
     }, /*#__PURE__*/_react.default.createElement("img", {
       className: "thumbnail",
       src: item.poster
-    }), /*#__PURE__*/_react.default.createElement("div", {
+    })), item.progressBarPercent > 95 ? /*#__PURE__*/_react.default.createElement("span", {
+      className: "watched"
+    }, "Watched", /*#__PURE__*/_react.default.createElement("span", null)) : '', /*#__PURE__*/_react.default.createElement("div", {
       className: "desc"
     }, /*#__PURE__*/_react.default.createElement("h4", null, item.title), /*#__PURE__*/_react.default.createElement("div", null, item.shortDescription), /*#__PURE__*/_react.default.createElement("button", {
-      className: "play_pause",
+      className: "play",
       onClick: e => this.openPlayer(e, item)
-    }))))), /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {
+    }), /*#__PURE__*/_react.default.createElement("span", {
+      className: "year"
+    }, item.year), /*#__PURE__*/_react.default.createElement("div", {
+      className: "progress_parent"
+    }, /*#__PURE__*/_react.default.createElement(_progressBar.default, {
+      progressBarPercent: item.progressBarPercent
+    })))))), this.state.url ? /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {
       url: this.state.url,
       poster: this.state.poster,
       closePlayer: this.closePlayer
-    }));
+    }) : null, this.state.showMovieDetails ? /*#__PURE__*/_react.default.createElement(_movieDetails.default, {
+      movie: this.state.movie,
+      openPlayer: this.openPlayer,
+      closeMovieDetails: this.closeMovieDetails
+    }) : null);
   }
 
 }
