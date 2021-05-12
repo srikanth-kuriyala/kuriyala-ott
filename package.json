@@ -1,6 +1,6 @@
 {
   "name": "@srikanth.kuriyala/kuriyala-ott",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "OTT client platform",
   "main": "dist/index.js",
   "module": "dist/index.js",
