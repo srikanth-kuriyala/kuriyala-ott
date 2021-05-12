@@ -3,6 +3,8 @@
 2. Play movie/video by clicking play icon in the list
 3. Close the video
 4. Basic UI
+5. Progress bar
+6. Watched label which has `progressBarPercent`
 
 # Installation
 If you are using `npm` use:
