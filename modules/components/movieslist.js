@@ -38,6 +38,7 @@ class MoviesList extends React.Component {
 
     closeMovieDetails = (e) => {
         e.preventDefault();
+        document.body.style.overflow = "auto";
         this.setState({ showPlayer: false, showMovieDetails: false, movie: '' });
     }
 
@@ -52,12 +53,17 @@ class MoviesList extends React.Component {
                             <span className="watched">Watched<span></span></span>
                         : ''}
                         <div className="desc">
-                            <h4>{item.title}</h4>
+                            <h4>
+                                {item.title}
+                                <span className="year">{item.year}</span>
+                            </h4>
                             <div>{item.shortDescription}</div>
                             <button className="play" onClick={(e) => this.openPlayer(e, item)}></button>
-                            <span className="year">{item.year}</span>
-                            <div className="progress_parent">
-                                <ProgressBar progressBarPercent={item.progressBarPercent}/>
+                            
+                            <div className="progress_parent_parent">
+                                <div className="progress_parent">
+                                    <ProgressBar progressBarPercent={item.progressBarPercent}/>
+                                </div>
                             </div>
                         </div>
                     </li>

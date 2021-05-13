@@ -50,6 +50,7 @@ class SRKPlayer extends _react.default.Component {
     this.video.addEventListener("ended", this.videoStoppedPlaying);
     this.video.addEventListener("pause", this.videoStoppedPlaying);
     this.video.addEventListener("seeking", this.videoSeek);
+    document.body.style.overflow = "hidden";
   }
 
   componentWillUnmount() {
@@ -59,6 +60,7 @@ class SRKPlayer extends _react.default.Component {
     this.video.removeEventListener("ended", this.videoStoppedPlaying);
     this.video.removeEventListener("pause", this.videoStoppedPlaying);
     this.video.removeEventListener("seeking", this.videoSeek);
+    document.body.style.overflow = "auto";
   } // remember time user started the video
 
 

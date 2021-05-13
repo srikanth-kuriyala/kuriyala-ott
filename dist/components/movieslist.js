@@ -51,6 +51,7 @@ class MoviesList extends _react.default.Component {
 
     _defineProperty(this, "closeMovieDetails", e => {
       e.preventDefault();
+      document.body.style.overflow = "auto";
       this.setState({
         showPlayer: false,
         showMovieDetails: false,
@@ -83,16 +84,18 @@ class MoviesList extends _react.default.Component {
       className: "watched"
     }, "Watched", /*#__PURE__*/_react.default.createElement("span", null)) : '', /*#__PURE__*/_react.default.createElement("div", {
       className: "desc"
-    }, /*#__PURE__*/_react.default.createElement("h4", null, item.title), /*#__PURE__*/_react.default.createElement("div", null, item.shortDescription), /*#__PURE__*/_react.default.createElement("button", {
+    }, /*#__PURE__*/_react.default.createElement("h4", null, item.title, /*#__PURE__*/_react.default.createElement("span", {
+      className: "year"
+    }, item.year)), /*#__PURE__*/_react.default.createElement("div", null, item.shortDescription), /*#__PURE__*/_react.default.createElement("button", {
       className: "play",
       onClick: e => this.openPlayer(e, item)
-    }), /*#__PURE__*/_react.default.createElement("span", {
-      className: "year"
-    }, item.year), /*#__PURE__*/_react.default.createElement("div", {
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "progress_parent_parent"
+    }, /*#__PURE__*/_react.default.createElement("div", {
       className: "progress_parent"
     }, /*#__PURE__*/_react.default.createElement(_progressBar.default, {
       progressBarPercent: item.progressBarPercent
-    }))))) : /*#__PURE__*/_react.default.createElement("h1", null, "No Movies available")), this.state.showPlayer ? /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {
+    })))))) : /*#__PURE__*/_react.default.createElement("h1", null, "No Movies available")), this.state.showPlayer ? /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {
       movie: this.state.movie,
       closePlayer: this.closePlayer
     }) : null, this.state.showMovieDetails ? /*#__PURE__*/_react.default.createElement(_movieDetails.default, {

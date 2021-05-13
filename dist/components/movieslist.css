@@ -10,9 +10,15 @@ ul.movies_list li {
     width: auto;
     margin: 10px;
     border: 1px solid white;
+    padding-bottom: 10px;
 }
 ul.movies_list li h4 {
     line-height: 0;
+}
+ul.movies_list li h4 span {
+    float: right;
+    margin-top: -17px;
+    font-weight: normal;
 }
 ul.movies_list .desc, .movie_details .desc {
     padding: 10px;
@@ -31,6 +37,7 @@ ul.movies_list li:hover {
     margin-top: 10px;
     border: none;
     cursor: pointer;
+    float: left;
 }
 .shaka-video-container {
     position: absolute !important;
@@ -59,16 +66,11 @@ ul.movies_list li:hover {
 }
 .movie_details {
     width: 98%;
-    height: 96%;
+    height: 100%;
     position: absolute;
     background: #282c34;
     top: 0;
     padding: 15px;
-}
-.movie_details .thumbnail {
-    height: 400px;
-    width: 320px;
-    margin-right: 15px;
 }
 .progress_bar {
     background: cornflowerblue;
@@ -78,6 +80,21 @@ ul.movies_list li:hover {
 .progress_parent {
     width: 100%;
     background: whitesmoke;
+}
+.movie_details .progress_parent {
+    margin-top: 20px;
+}
+.progress_parent_parent {
+    float: left;
+}
+.movie_details .progress_parent_parent {
+    width: 95%;
+    margin-left: 15px;
+}
+.movies_list .progress_parent_parent {
+    margin-left: 40px;
+    margin-top: -29px;
+    width: 80%;
 }
 .watched {
     display: flex;
@@ -102,5 +119,22 @@ ul.movies_list li:hover {
 .banner {
     height: 60%;
     width: 100%;
-    margin-top: 15px;
+    margin: 15px 0 0px 10px;
+}
+
+@media only screen and (max-device-width: 480px) {    
+    .movie_details .progress_parent_parent {
+        width: 80%;
+    }
+    .movie_details .progress_parent {
+        margin-top: 23px;
+    }
+    .movie_details {
+        padding: 5px;
+        overflow: auto;
+        height: fit-content;
+    }
+    .movie_details .desc {
+        margin-bottom: 50px;
+    }
 }

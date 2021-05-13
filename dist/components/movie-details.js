@@ -14,6 +14,7 @@ var _progressBar = _interopRequireDefault(require("../core/progress-bar"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const MovieDetailsPage = props => {
+  document.body.style.overflow = "hidden";
   const {
     movie
   } = props;
@@ -35,10 +36,12 @@ const MovieDetailsPage = props => {
     className: "play",
     onClick: e => props.openPlayer(e, movie)
   }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "progress_parent_parent"
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "progress_parent"
   }, /*#__PURE__*/_react.default.createElement(_progressBar.default, {
     progressBarPercent: movie.progressBarPercent
-  }))));
+  })))));
 };
 
 var _default = MovieDetailsPage;

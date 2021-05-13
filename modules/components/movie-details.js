@@ -2,6 +2,7 @@ import React from "react";
 import ProgressBar from "../core/progress-bar";
 
 const MovieDetailsPage = (props) => {
+    document.body.style.overflow = "hidden";
     const {movie} = props;
     return(
         <div className="movie_details">
@@ -18,8 +19,10 @@ const MovieDetailsPage = (props) => {
                     <span><strong>Audio language:</strong> {movie.language}</span>
                 </div>
                 <button className="play" onClick={(e) => props.openPlayer(e, movie)}></button>
-                <div className="progress_parent">
-                    <ProgressBar progressBarPercent={movie.progressBarPercent}/>
+                <div className="progress_parent_parent">
+                    <div className="progress_parent">
+                        <ProgressBar progressBarPercent={movie.progressBarPercent}/>
+                    </div>
                 </div>
             </div>
         </div>

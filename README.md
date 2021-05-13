@@ -143,14 +143,14 @@ const movies = [
 | `url` | Video source | `string`
 | `poster` | Image source to display in listing page | `string` |
 | `shortDescription` | This is short description to display in listing page | `string` |
-| `year` | Video released year to display in listing page and Video detail page | `number` |
+| `year` | Video released year to display in listing page and in Video detail page | `number` |
 | `banner` | Banner image source to display in Video detail page | `string` |
 | `description` | Video long description to display in Video detail page | `string` |
 | `progressBarPercent` | To display howmuch percentage of video is watched | `float` |
 | `duration` | Total video duration in seconds | `float` |
 | `timePlayed` | Video duration already played in seconds | `float` |
 | `timeStarted` | Time when it is started. By default send it as `-1`, | `float` |
-| `starring` | Information about cast | `string` |
+| `starring` | People names acted | `string` |
 | `director` | Director name | `string` |
 | `category` | Video genre | `string` |
 | `language` | Audio language | `string` |
