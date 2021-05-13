@@ -29,33 +29,36 @@ class SRKPlayer extends _react.default.Component {
     };
     this.videoStartedPlaying = this.videoStartedPlaying.bind(this);
     this.videoStoppedPlaying = this.videoStoppedPlaying.bind(this);
+    this.videoSeek = this.videoSeek.bind(this);
   }
 
   componentDidMount() {
-    var video = document.querySelector("video");
+    this.video = document.querySelector("video");
     var self = this;
     var i = setTimeout(function () {
-      if (video.readyState > 0) {
+      if (self.video.readyState > 0) {
         // If video metadata is loaded get duration
         self.setState({
-          duration: video.duration
+          duration: self.video.duration
         });
       }
 
       clearTimeout(i);
     }, 1000);
-    video.addEventListener("play", this.videoStartedPlaying);
-    video.addEventListener("playing", this.videoStartedPlaying);
-    video.addEventListener("ended", this.videoStoppedPlaying);
-    video.addEventListener("pause", this.videoStoppedPlaying);
+    this.video.addEventListener("play", this.videoStartedPlaying);
+    this.video.addEventListener("playing", this.videoStartedPlaying);
+    this.video.addEventListener("ended", this.videoStoppedPlaying);
+    this.video.addEventListener("pause", this.videoStoppedPlaying);
+    this.video.addEventListener("seeking", this.videoSeek);
   }
 
   componentWillUnmount() {
-    var video = document.querySelector("video");
-    video.removeEventListener("play", this.videoStartedPlaying);
-    video.removeEventListener("playing", this.videoStartedPlaying);
-    video.removeEventListener("ended", this.videoStoppedPlaying);
-    video.removeEventListener("pause", this.videoStoppedPlaying);
+    this.video = document.querySelector("video");
+    this.video.removeEventListener("play", this.videoStartedPlaying);
+    this.video.removeEventListener("playing", this.videoStartedPlaying);
+    this.video.removeEventListener("ended", this.videoStoppedPlaying);
+    this.video.removeEventListener("pause", this.videoStoppedPlaying);
+    this.video.removeEventListener("seeking", this.videoSeek);
   } // remember time user started the video
 
 
@@ -77,18 +80,35 @@ class SRKPlayer extends _react.default.Component {
         timePlayed: timePlayed
       });
     }
+  } // Video 
+
+
+  videoSeek() {
+    this.setState({
+      timePlayed: this.video.currentTime
+    });
+  }
+
+  closePlayer(e) {
+    this.videoStoppedPlaying(e);
+    var self = this;
+    setTimeout(() => {
+      self.props.closePlayer(e, self.state);
+    }, 200);
   }
 
   render() {
-    console.log(this.state);
+    const {
+      movie
+    } = this.props;
     return /*#__PURE__*/_react.default.createElement("div", {
       className: "player"
     }, /*#__PURE__*/_react.default.createElement("button", {
       className: "close",
-      onClick: e => this.props.closePlayer(e, this.state)
+      onClick: e => this.closePlayer(e)
     }), /*#__PURE__*/_react.default.createElement(_shakaPlayerReact.default, {
       autoPlay: true,
-      src: this.props.url
+      src: "".concat(movie.url, "#t=").concat(movie.timePlayed, ",").concat(movie.duration)
     }));
   }
 

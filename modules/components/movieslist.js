@@ -9,9 +9,8 @@ class MoviesList extends React.Component {
         super(props);
         
         this.state = {
-            url: '',
-            poster: '',
             movie: '',
+            showPlayer: false,
             showMovieDetails: false
         }
 
@@ -23,30 +22,30 @@ class MoviesList extends React.Component {
 
     openPlayer = (e, item) => {
         e.preventDefault();
-        this.setState({ url : item.url, poster: item.poster, showMovieDetails: false });
+        this.setState({ showPlayer: true, showMovieDetails: false, movie: item });
     }
 
     closePlayer = (e, videoState) => {
         e.preventDefault();
-        this.props.updateMovieStatus(videoState);
-        this.setState({ url: '', poster: '' });
+        this.props.updateMovieStatus(videoState, this.state.movie);
+        this.setState({ showPlayer: false });
     }
 
     movieDetails = (e, item) => {
         e.preventDefault();
-        this.setState({ showMovieDetails: true, movie: item });
+        this.setState({ showPlayer: false, showMovieDetails: true, movie: item });
     }
 
     closeMovieDetails = (e) => {
         e.preventDefault();
-        this.setState({ showMovieDetails: false, movie: '' });
+        this.setState({ showPlayer: false, showMovieDetails: false, movie: '' });
     }
 
     render() {
         return (
             <div>
                 <ul className="movies_list">
-                { this.props.movies.map((item, index) => (
+                { this.props.movies ? this.props.movies.map((item, index) => (
                     <li key={index}>
                         <a onClick={(e) => this.movieDetails(e, item)}><img className="thumbnail" src={item.poster}/></a>
                         {item.progressBarPercent > 95 ?
@@ -62,11 +61,11 @@ class MoviesList extends React.Component {
                             </div>
                         </div>
                     </li>
-                )) }
+                )) : <h1>No Movies available</h1> }
                 </ul>
 
-                {this.state.url ?
-                    <SRKPlayer url={this.state.url} poster={this.state.poster} closePlayer={this.closePlayer}/>
+                {this.state.showPlayer ?
+                    <SRKPlayer movie={this.state.movie} closePlayer={this.closePlayer}/>
                 : null}
 
                 {this.state.showMovieDetails ?

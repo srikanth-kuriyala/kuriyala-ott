@@ -1,4 +1,4 @@
-import Badge from './Badge';
 import Button from './Button';
+import ProgressBar from "./progress-bar";
 
-export { Badge, Button };
+export { Button, ProgressBar };

@@ -26,24 +26,24 @@ class MoviesList extends _react.default.Component {
     _defineProperty(this, "openPlayer", (e, item) => {
       e.preventDefault();
       this.setState({
-        url: item.url,
-        poster: item.poster,
-        showMovieDetails: false
+        showPlayer: true,
+        showMovieDetails: false,
+        movie: item
       });
     });
 
     _defineProperty(this, "closePlayer", (e, videoState) => {
       e.preventDefault();
-      this.props.updateMovieStatus(videoState);
+      this.props.updateMovieStatus(videoState, this.state.movie);
       this.setState({
-        url: '',
-        poster: ''
+        showPlayer: false
       });
     });
 
     _defineProperty(this, "movieDetails", (e, item) => {
       e.preventDefault();
       this.setState({
+        showPlayer: false,
         showMovieDetails: true,
         movie: item
       });
@@ -52,15 +52,15 @@ class MoviesList extends _react.default.Component {
     _defineProperty(this, "closeMovieDetails", e => {
       e.preventDefault();
       this.setState({
+        showPlayer: false,
         showMovieDetails: false,
         movie: ''
       });
     });
 
     this.state = {
-      url: '',
-      poster: '',
       movie: '',
+      showPlayer: false,
       showMovieDetails: false
     };
     this.openPlayer = this.openPlayer.bind(this);
@@ -72,7 +72,7 @@ class MoviesList extends _react.default.Component {
   render() {
     return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", {
       className: "movies_list"
-    }, this.props.movies.map((item, index) => /*#__PURE__*/_react.default.createElement("li", {
+    }, this.props.movies ? this.props.movies.map((item, index) => /*#__PURE__*/_react.default.createElement("li", {
       key: index
     }, /*#__PURE__*/_react.default.createElement("a", {
       onClick: e => this.movieDetails(e, item)
@@ -92,9 +92,8 @@ class MoviesList extends _react.default.Component {
       className: "progress_parent"
     }, /*#__PURE__*/_react.default.createElement(_progressBar.default, {
       progressBarPercent: item.progressBarPercent
-    })))))), this.state.url ? /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {
-      url: this.state.url,
-      poster: this.state.poster,
+    }))))) : /*#__PURE__*/_react.default.createElement("h1", null, "No Movies available")), this.state.showPlayer ? /*#__PURE__*/_react.default.createElement(_videoPlayer.default, {
+      movie: this.state.movie,
       closePlayer: this.closePlayer
     }) : null, this.state.showMovieDetails ? /*#__PURE__*/_react.default.createElement(_movieDetails.default, {
       movie: this.state.movie,
