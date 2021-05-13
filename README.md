@@ -136,25 +136,21 @@ const movies = [
 ```
 
 # Attributes
-`id` Unique ID of the video
-`title` Video title
-`url` Video source
-`poster` Image source to display in listing page
-`shortDescription` This is short description to display in listing page
-`year` Video released year to display in listing page and Video detail page
-`banner` Banner image source to display in Video detail page
-`description` Video long description to display in Video detail page
-`progressBarPercent` To display howmuch percentage of video is watched
-`duration` Total video duration
-`timePlayed` Video duration already played
-`timeStarted` Time when it is started. By default send it as `-1`,
-`starring` Information about cast
-`director` Director name
-`category` Video genre
-`language` Audio language
-
-| Left-Aligned  | Center Aligned  |
+| attribute  | detail  |
 | :------------ |:---------------:|
-| id      | Unique ID of the video |
-| title      | Video title        |
-| url | Image source to display in listing page        |
+| `id` | Unique ID of the video |
+| `title` | Video title |
+| `url` | Video source |
+| `poster` | Image source to display in listing page |
+| `shortDescription` | This is short description to display in listing page |
+| `year` | Video released year to display in listing page and Video detail page |
+| `banner` | Banner image source to display in Video detail page |
+| `description` | Video long description to display in Video detail page |
+| `progressBarPercent` | To display howmuch percentage of video is watched |
+| `duration` | Total video duration |
+| `timePlayed` | Video duration already played |
+| `timeStarted` | Time when it is started. By default send it as `-1`, |
+| `starring` | Information about cast |
+| `director` | Director name |
+| `category` | Video genre |
+| `language` | Audio language |
