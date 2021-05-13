@@ -136,21 +136,21 @@ const movies = [
 ```
 
 # Attributes
-| attribute  | detail  |
-| :------------ |:---------------:|
-| `id` | Unique ID of the video |
-| `title` | Video title |
-| `url` | Video source |
-| `poster` | Image source to display in listing page |
-| `shortDescription` | This is short description to display in listing page |
-| `year` | Video released year to display in listing page and Video detail page |
-| `banner` | Banner image source to display in Video detail page |
-| `description` | Video long description to display in Video detail page |
-| `progressBarPercent` | To display howmuch percentage of video is watched |
-| `duration` | Total video duration |
-| `timePlayed` | Video duration already played |
-| `timeStarted` | Time when it is started. By default send it as `-1`, |
-| `starring` | Information about cast |
-| `director` | Director name |
-| `category` | Video genre |
-| `language` | Audio language |
+| attribute  | detail  | type |
+| :------------ |:---------------:|:---------------:|
+| `id` | Unique ID of the video | `any` |
+| `title` | Video title | `string` |
+| `url` | Video source | `string`
+| `poster` | Image source to display in listing page | `string` |
+| `shortDescription` | This is short description to display in listing page | `string` |
+| `year` | Video released year to display in listing page and Video detail page | `number` |
+| `banner` | Banner image source to display in Video detail page | `string` |
+| `description` | Video long description to display in Video detail page | `string` |
+| `progressBarPercent` | To display howmuch percentage of video is watched | `float` |
+| `duration` | Total video duration in seconds | `float` |
+| `timePlayed` | Video duration already played in seconds | `float` |
+| `timeStarted` | Time when it is started. By default send it as `-1`, | `float` |
+| `starring` | Information about cast | `string` |
+| `director` | Director name | `string` |
+| `category` | Video genre | `string` |
+| `language` | Audio language | `string` |
