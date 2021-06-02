@@ -9,10 +9,10 @@ Object.defineProperty(exports, "Button", {
     return _core.Button;
   }
 });
-Object.defineProperty(exports, "Badge", {
+Object.defineProperty(exports, "Header", {
   enumerable: true,
   get: function get() {
-    return _core.Badge;
+    return _components.Header;
   }
 });
 Object.defineProperty(exports, "MoviesList", {

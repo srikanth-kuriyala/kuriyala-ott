@@ -15,6 +15,8 @@ var _movieDetails = _interopRequireDefault(require("./movie-details"));
 
 var _progressBar = _interopRequireDefault(require("../core/progress-bar"));
 
+var _Search = _interopRequireDefault(require("./Search"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -71,7 +73,9 @@ class MoviesList extends _react.default.Component {
   }
 
   render() {
-    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", {
+    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_Search.default, {
+      movies: this.props.movies
+    }), /*#__PURE__*/_react.default.createElement("ul", {
       className: "movies_list"
     }, this.props.movies ? this.props.movies.map((item, index) => /*#__PURE__*/_react.default.createElement("li", {
       key: index

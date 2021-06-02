@@ -5,7 +5,8 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "scripts": {
-    "build": "rm -rf dist && NODE_ENV=production babel modules --out-dir dist --copy-files"
+    "build": "NODE_ENV=production babel modules --out-dir dist --copy-files",
+    "windows-build": "set NODE_ENV=production && babel modules --out-dir dist --copy-files"
   },
   "author": "Srikanth Kuriyala",
   "license": "ISC",
