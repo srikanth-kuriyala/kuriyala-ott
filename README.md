@@ -1,3 +1,5 @@
+# Note: This package is having very basic features
+
 # Features covered
 1. Movielist: Poster, Title, Short description, Year, Play, Progress bar
 2. Progress bar: Indicates the video watch percentage
